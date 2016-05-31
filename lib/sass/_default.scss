@@ -1,0 +1,132 @@
+body {
+    line-height: 1.3;
+    font-family: $bodyFont;
+    font-size: 16px; // 16px
+    color: $bodyColor;
+}
+::selection {
+    background: $selectionBackgroundColor; /* Safari */
+    color: $selectionColor;
+}
+::-moz-selection {
+    color: $selectionColor;
+    background: $selectionBackgroundColor; /* Firefox */
+}
+.container {
+    max-width: 1256px;
+    position: relative;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: $headingFont;
+    font-weight: 600;
+    color: $headingColor;
+}
+h2, h3, h4, h5, h6 {
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+h1 {
+    @include font-size(48px);
+    margin-top: 0;
+}
+h2 {
+    @include font-size(28px);
+}
+h3 {
+    @include font-size(24px);
+}
+h4 {
+     @include font-size(22px);
+}
+h5 {
+     @include font-size(20px);
+}
+h6 {
+     @include font-size(18px);
+}
+b, strong {
+    font-weight: 700;
+}
+a {
+    color: $linksColor;
+
+    &:hover {
+      color: $linksHoverColor;
+      text-decoration: underline;
+    }
+    &:active, &:focus {
+      color: $linksHoverColor;
+      background: transparent;
+    }
+}
+p, ul {
+    margin: 0 0 20px;
+}
+p {
+	line-height: 1.4;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+sup {
+  font-size: 60%;
+}
+iframe {
+  border: none;
+}
+blockquote {
+	@include font-size(16px);
+	border-left: 0px;
+	margin: 0px;
+}
+img.alignright {
+    padding: 4px;
+    margin: 0 0 2px 7px;
+    display: inline;
+    }
+img.alignleft {
+    padding: 4px;
+    margin: 0 7px 2px 0;
+    display: inline;
+    }
+img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.alignright {
+    float: right;
+    }
+.alignleft {
+    float: left;
+    }
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.metaslider {
+	max-width: none !important;
+}
+/* Image style */
+#scrollUp {
+    background-color: #333;
+    border-radius: 50%;
+    bottom: 20px;
+    right: 20px;
+    width: 38px;    /* Width of image */
+    height: 38px;   /* Height of image */
+}
+#scrollUp:before {
+	content: "\f106";
+	font-family: FontAwesome;
+	font-size: 32px;
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -21px;
+	margin-left: -10px;
+}

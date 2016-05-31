@@ -1,0 +1,29 @@
+input, select {
+	padding: 7px 10px;
+	width: 100%;
+	max-width: 500px;
+	border: 1px solid rgb(152, 152, 152);
+}
+textarea {
+	padding: 6px 9px;
+	width: 100%;
+	max-width: 500px;
+	border: 1px solid rgb(152, 152, 152);
+}
+input[type="submit"] {
+    @include button-default()
+}
+input[type="file"] {
+	display: block;
+	width: auto;
+	border: 0px;
+	line-height: 16px;
+}
+input[type="checkbox"], input[type="radio"] {
+	width: 14px;
+	height: 15px;
+	margin-left: 5px;
+}
+select {
+	background: white;
+}

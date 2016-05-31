@@ -1,0 +1,37 @@
+footer {
+	width: 100%;
+	background: $footerBackgroundColor;
+	padding: 45px 0;
+	color: $footerColor;
+	
+	h1, h2, h3, h4, h5, h6 {
+		color: $footerHeadingColor;
+	}
+
+	.social {
+		ul {
+			list-style-type: none;
+			li {
+				float: left;
+				margin-right: 10px;
+			}
+		}
+	}
+
+	ul {
+		list-style-type: none;
+		padding: 0px;
+
+		li {
+			a {
+				color: $footerLinks;
+
+				&:hover {
+					color: $footerLinksHover;
+					text-decoration: none;
+					opacity: 0.9;
+				}
+			}
+		}
+	}
+}

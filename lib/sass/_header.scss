@@ -1,0 +1,229 @@
+header {
+    width: 100%;
+    padding: 0 0 25px;
+    background-color: $headerBackgroundColor;
+    color: $headerColor;
+
+    a {
+    	color: $headerLinksColor;
+    	transition: 0.2s all ease-in-out;
+
+    	&:hover {
+    		color: $headerLinksHoverColor;
+    	}
+    }
+
+	p,
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+    #logo {
+ 		float: left;
+    }
+	.top-nav {
+		padding: 10px 0;
+	}
+    .social {
+    	ul {
+    		list-style: none;
+    		display: table;
+    		width: 100%;
+
+    		li {
+    			float: left;
+    			margin-right: 10px;
+
+    			a {
+    				color: $headerSocialLinksColor;
+
+    				&:hover {
+    					color: $headerSocialLinksHoverColor;
+    				}
+    			}
+    		}
+    	}
+    }
+
+	.search-block {
+		margin-bottom: 20px;
+		border: none;
+		border-radius: 0px;
+		max-width: 400px;
+		float: right;
+
+		#search {
+			max-width: 200px;
+			float: right;
+			background-color: $searchBackgroundColor;
+			border-radius: 0px;
+			border: 1px solid #efefef;
+			outline: 0;
+		}
+		
+		.input-group-btn {
+			.btn {
+				float: right;
+				height: 38px;
+				width: 38px;
+				background-color: $searchButtonColor;
+				border: 1px solid $searchButtonColor;
+				outline: 0;
+				margin: 0;
+				transition: 0.2s all ease-in-out;
+
+				&:hover {
+					background-color: $searchButtonHoverColor;
+					border: 1px solid $searchButtonHoverColor;
+				}
+			}
+
+			i {
+				color: $searchIconColor;
+			}
+		}
+	}
+
+	.input-group-btn .btn, 
+	.input-group-btn .btn-group {
+		margin-left: 0;
+	}
+    
+
+    #primary-nav {
+
+		nav {
+			float: right;
+
+			.menu {
+					list-style-type: none;
+					float: left;
+					margin: 0;
+					padding: 0;
+
+		        li {
+		            float: left;
+		            position: relative;
+
+		            a {
+						font-family: $primaryNavFont;
+						color: $navColor;
+						padding: 8px 10px;
+
+		                &:hover, &:focus, &:active {
+		                    text-decoration: none;
+		                    background: transparent;
+		                    color: $navColorHover;
+		                }
+		            }
+		            .sub-menu {
+		            	display: none;
+
+		            	li {
+		            		.sub-menu {
+		            			display: none;
+		            		}
+		            	}
+		        	}
+		        	&:hover {
+		        		.sub-menu {
+		        			display: block;
+		        			position: absolute;
+		        			top: 28px;
+		        			left: 0;
+		        			list-style-type: none;
+		        			padding: 0px;
+							margin: 0px;
+							border-radius: 0px;
+							z-index: 10000;
+							border: 1px solid #ccc;
+							border: 1px solid rgba(0,0,0,.15);
+							border-radius: 4px;
+							box-shadow: 0 6px 12px rgba(0,0,0,.175);
+
+		            		li {
+		            			width: 100%;
+		            			background-color: $submenuListBackColor;
+		            			padding: 0px;
+		            			margin: 0;
+		            			position: relative;
+
+		            			a {
+		            				background-color: $submenuBackColor;
+		            				color: $submenuColor;
+									white-space: nowrap;
+									display: block;
+
+									&:hover {
+										background-color: $submenuColorHover;
+									}
+		            			}
+
+		            			&:hover {
+
+					        		.sub-menu {
+					        			display: block;
+					        			position: absolute;
+					        			top: 0;
+					        			left: 100%;
+					        			list-style-type: none;
+					        			padding: 0px;
+										margin: 0px;
+										border-radius: 0px;
+										z-index: 10000;
+										border: 1px solid #ccc;
+										border: 1px solid rgba(0,0,0,.15);
+										border-radius: 4px;
+										box-shadow: 0 6px 12px rgba(0,0,0,.175);
+
+					            		li {
+					            			width: 100%;
+					            			background-color: $submenuListBackColor;
+					            			padding: 0px;
+					            			margin: 0;
+					            			a {
+					            				background-color: $submenuBackColor;
+					            				color: $submenuColor;
+												white-space: nowrap;
+												display: block;
+
+												&:hover {
+													background-color: $submenuColorHover;
+												}
+					            			}
+					            		}
+
+										.active > a {
+											background-color: transparent;
+										}
+					        		}
+		            			}
+		            		}
+
+							.active > a {
+								background-color: transparent;
+							}
+		        		}
+		        	}
+		        }
+		    }
+		    .navbar-nav {
+		    	float: none;
+		    }
+		    .navbar-toggle {
+		        background: $navToggleBackground;
+
+		        .icon-bar {
+		            background: $navToggleBars;
+		        }
+		    }
+		}
+	}
+}
+.navbar-collapse {
+	max-height: none;
+}
+.nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
+	background: transparent;
+	border-color: none;
+}

@@ -1,0 +1,134 @@
+/* fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700italic,700,800,800italic|Montserrat:400,700);
+
+$bodyFont: 'Open Sans', sans-serif;
+$headingFont: 'Open Sans', sans-serif;
+$navFont: 'Montserrat', sans-serif;
+$buttonsFont: 'Open Sans', sans-serif;
+$primaryNavFont: 'Montserrat', sans-serif;
+
+/* default scheme */
+$bodyColor: #707070;
+$primaryColor: #3c948b;
+$secondaryColor: #14032D;
+
+$selectionColor: #fff;
+$selectionBackgroundColor: $primaryColor;
+
+/* h2, h3, h4, h5, h6 */
+$headingColor: $secondaryColor;
+
+/* links */
+$linksColor: $primaryColor;
+$linksHoverColor: $secondaryColor;
+
+/* header styes */
+$headerColor: #444;
+$headerLinksColor: $secondaryColor;
+$headerLinksHoverColor: $primaryColor;
+$headerSocialLinksColor: $primaryColor;
+$headerSocialLinksHoverColor: $secondaryColor;
+$headerBackgroundColor: transparent;
+$searchIconColor: #fff;
+$searchBackgroundColor: #fff;
+$searchButtonColor: $primaryColor;
+$searchButtonHoverColor: $primaryColor - 20;
+
+/* navigation */
+$navColor: $secondaryColor;
+$navColorHover: $primaryColor;
+$submenuListBackColor: $secondaryColor;
+$submenuBackColor: $secondaryColor;
+$submenuColor: #fff;
+$submenuColorHover: $primaryColor;
+$navToggleBackground: transparent;
+$navToggleBars: $primaryColor;
+$mobileDropDownBkg: $primaryColor;
+
+/* footer styles */
+$footerColor: $secondaryColor;
+$footerHeadingColor: $primaryColor;
+$footerLinks: $secondaryColor;
+$footerLinksHover: $primaryColor;
+$footerBackgroundColor: transparent;
+
+@mixin button-default() {
+	font-family: $buttonsFont;
+	font-size: 1em;
+	font-weight: 700;
+	padding: 15px 30px;
+	transition: all .2s ease-in-out;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white;
+	background: $primaryColor;
+	outline: none;
+	display: inline-block;
+	width: auto;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: white;
+		background-color: $primaryColor - 20;
+	}
+}
+// @include button-default()
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1em;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+// @include font-size(42px);
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+// @include opacity(0.5);
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}
+
+/* EXAMPLE
+	@include keyframes(slide-down) {
+	  0% { opacity: 1; }
+	  90% { opacity: 0; }
+	}
+
+	.element {
+	  width: 100px;
+	  height: 100px;
+	  background: black;
+	  @include animation('slide-down 5s 3');
+	}
+ */

@@ -1,0 +1,41 @@
+.comment-list {
+	list-style-type: none;
+	padding: 0px;
+	transition: all 1s ease;
+
+	li ul,
+	li ul li ul,
+	li ul li ul li ul {
+		list-style-type: none;
+	}
+
+	.comment-body {
+		margin-bottom: 50px;
+
+		p {
+			border: 1px solid #ccc;
+			padding: 5px;
+			min-height: 100px;
+			max-width: 500px;
+			margin: 10px 0 5px 0;
+		}
+
+		.comment-author {
+
+			img {
+				float: left;
+				margin-right: 20px;
+			}
+		}
+
+		.comment-meta {
+			font-size: 14px;
+		}
+	}
+}
+
+#commentform {
+	label {
+		display: block;
+	}
+}

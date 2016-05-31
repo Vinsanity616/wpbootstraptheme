@@ -1,0 +1,26 @@
+main {
+	button,.btn {
+		@include button-default();
+	}
+
+	.home-content {
+		min-height: 600px;
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	.page-content {
+		min-height: 600px;
+		padding-top: 50px;
+		padding-bottom: 50px;
+
+		.post-page-nav {
+			width: 32px;
+			float: right;
+
+			a {
+				font-size: 2em;
+			}
+		}
+	}
+}

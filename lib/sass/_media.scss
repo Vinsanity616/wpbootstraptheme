@@ -1,0 +1,22 @@
+@media all and (min-width: 992px) and (max-width: 1200px) {
+	
+}
+
+@media all and (max-width: 992px) {
+	
+}
+@media all and (min-width: 768px) {
+	.navbar-collapse.collapse {
+		padding: 0;
+	}
+}
+@media all and (max-width: 767px) {
+	header #primary-nav nav { width: 100%; }
+	header #primary-nav nav .navbar-nav { background: $mobileDropDownBkg; }
+	header #primary-nav nav .menu { float: none; }
+	header #primary-nav nav .menu li { width: 100%; }
+	header #primary-nav nav .menu li a { display: block; text-align: center; }
+	header #primary-nav nav .menu li:hover .sub-menu { position: relative; top: 0; }
+	header #primary-nav nav .menu li:hover .sub-menu li:hover .sub-menu { position: relative; left: 0; }
+	.navbar-toggle { margin-top: 0px; margin-right: 0px; margin-bottom: 0px; }
+}

@@ -10,6 +10,7 @@ get_header ();
 
 	<main>
 		<div class="page-content">
+
 			<div class="container">
 				<div class="row">
 					<section class="col-md-12">
@@ -22,6 +23,7 @@ get_header ();
 					</section>
 				</div>
 			</div><!-- end container -->
+			
 		</div><!-- end page content -->
 	</main>
 		
